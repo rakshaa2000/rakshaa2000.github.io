@@ -359,3 +359,6 @@ a:link {
 .button-container .button:nth-child(2) {
   float: right;
 }
+.exp{
+  display: flex;
+}
