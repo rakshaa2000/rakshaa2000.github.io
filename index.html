@@ -29,6 +29,7 @@
         <button class="tablinks" onclick="openCity(event, 'proj')">My Projects</button>
         <button class="tablinks" onclick="openCity(event, 'exp')">Work Experience</button>
         <button class="tablinks" onclick="openCity(event, 'chart')">Skill Chart</button>
+        <button class="tablinks" onclick="openCity(event, 'hack')">Hackathon Stats</button>
       </div>
 
       <!-- Tab content -->
@@ -192,17 +193,17 @@
       
       <div id="exp" class="tabcontent">
         <h3>WORK EXPERIENCE</h3>
-        <img src="./images/work.svg" width="200px" height="200px">
         <div class="div">
+        <img src="./images/work.svg" width="200px" height="200px">
         <ul>
             <!-- <li>Software Developement Engineer, Microsoft IDC</li> -->
-            <li>Research Intern, NIT Trichy
+            <li><b>Research Intern, NIT Trichy</b>
                 <p>Low Voltage DC Pico-grid Topology for a Primary Healthcare Centre</p>
             </li>
-            <li>Media Relations Manager, Pragyan, NIT Trichy
+            <li><b>Media Relations Manager, Pragyan, NIT Trichy</b>
                 <p>Annual Techno-managerial Fest of NIT Trichy</p>
             </li>
-            <li>Content Writer, Currents, NIT Trichy
+            <li><b>Content Writer, Currents, NIT Trichy</b>
                 <p>Annual Symposium of the EEE Department</p>
             </li>
         </ul>
@@ -219,6 +220,17 @@
             branding=false
         ></codersrank-skills-chart>
         </div>
+      </div>
+      <div id="hack" class="tabcontent">
+          <h3>HACKATHON STATS</h3>
+          <div class="div">
+            <img src="https://idemoed.vercel.app/api/wall?username=rakshaa2000&level=0" alt="">
+            <div class="cont">
+                <h3>Check out my Hackathon projects here</h3>
+                <a href="https://devpost.com/rakshaa2000"><button class="devpost">DEVPOST</button></a>
+            </div>
+          </div>
+        
       </div>
       <script>
           document.getElementById("defaultOpen").click();
