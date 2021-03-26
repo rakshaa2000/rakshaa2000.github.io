@@ -10261,6 +10261,7 @@ form .row:first-child .floating-label-form-group {
   border: rgb(250, 235, 215) solid 1px;
   padding: 2%;
   border-radius: 10px;
+  margin: 1%;
 }
 .lol{
   margin: 2px  !important;
