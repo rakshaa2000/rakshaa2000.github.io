@@ -380,8 +380,7 @@ h6, .h6 {
 }
 
 .lead {
-  font-size: 1.25rem;
-  font-weight: 300;
+  color: #000;
 }
 
 .display-1 {
@@ -10240,4 +10239,38 @@ form .row:first-child .floating-label-form-group {
 .wli{
   list-style-type: '💻';
   padding-inline-start: 1ch;
+}
+.mentor{
+  width: 250px;
+  padding: 5px 5px 5px 5px;
+  background-color: rgba(250, 235, 215, 0.671);
+  color: #000;
+  border: #000  solid 1px;
+  margin: 2px;
+}
+.mentor img{
+  border-radius: 2px;
+  padding: 2%;
+}
+.lead-1{
+  background-color: rgba(250, 235, 215, 0.671);
+  color: #000;
+  padding: 2%;
+  border: #fff  1px;
+  border-radius: 5px;
+}
+.lead-2{
+  background-color: rgba(250, 235, 215, 0.671);
+  color: #000;
+  border: rgb(250, 235, 215) solid 1px;
+  padding: 2%;
+  border-radius: 10px;
+}
+.lol{
+  margin: 2px  !important;
+}
+.effect1{
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+     -moz-box-shadow: 0 10px 6px -6px #777;
+          box-shadow: 0 10px 6px -6px #777;
 }
