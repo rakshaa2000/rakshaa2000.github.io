@@ -10239,14 +10239,43 @@ form .row:first-child .floating-label-form-group {
 .mentor{
   width: 250px;
   padding: 5px 5px 5px 5px;
-  background: radial-gradient(farthest-corner at 0px 0px, #fff, rgba(241, 240, 238, 0.671));
+  background: radial-gradient(farthest-corner at 0px 0px, rgba(255, 255, 255, 0.75), rgba(241, 240, 238, 0.4));
   color: #000;
-  border: #000 solid 1px;
+  margin: 2px;
+}
+.mentor:hover{
+  width: 250px;
+  padding: 5px 5px 5px 5px;
+  background: radial-gradient(farthest-corner at 0px 0px, rgb(255, 229, 229), rgba(240, 219, 255, 0.671));
+  color: #000;
+  font-weight: bold;
   margin: 2px;
 }
 .mentor img{
   border-radius: 2px;
   padding: 2%;
+}
+.mentor1{
+  width: 250px;
+  padding: 5px 5px 5px 5px;
+  background: radial-gradient(farthest-corner at 0px 0px, rgba(255, 255, 255, 0.75), rgba(241, 240, 238, 0.4));
+  color: #000;
+  /* border: rgba(241, 240, 238, 0.671) solid 1px; */
+  margin: 2px;
+}
+.mentor1 img{
+  border-radius: 2px;
+  padding: 2%;
+  width: 50px;
+  height: 50px;
+}
+.mentor1:hover{
+  width: 250px;
+  padding: 5px 5px 5px 5px;
+  background: radial-gradient(farthest-corner at 0px 0px, rgb(255, 229, 229), rgba(225, 188, 250, 0.671));
+  color: #000;
+  font-weight: bold;
+  margin: 2px;
 }
 .lead-1{
   background: radial-gradient(farthest-corner at 0px 0px,rgba(255, 255, 255,0.8),rgba(250, 235, 215, 0.514));
