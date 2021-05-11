@@ -10241,7 +10241,8 @@ form .row:first-child .floating-label-form-group {
   padding: 5px 5px 5px 5px;
   background: radial-gradient(farthest-corner at 0px 0px, rgba(255, 255, 255, 0.75), rgba(241, 240, 238, 0.4));
   color: #000;
-  margin: 2px;
+  margin: 5px;
+  border-radius: 5px;
 }
 .mentor:hover{
   width: 250px;
@@ -10249,7 +10250,6 @@ form .row:first-child .floating-label-form-group {
   background: radial-gradient(farthest-corner at 0px 0px, rgb(255, 229, 229), rgba(240, 219, 255, 0.671));
   color: #000;
   font-weight: bold;
-  margin: 2px;
 }
 .mentor img{
   border-radius: 2px;
@@ -10276,6 +10276,7 @@ form .row:first-child .floating-label-form-group {
   color: #000;
   font-weight: bold;
   margin: 2px;
+  border-radius: 5px;
 }
 .lead-1{
   background: radial-gradient(farthest-corner at 0px 0px,rgba(255, 255, 255,0.8),rgba(250, 235, 215, 0.514));
