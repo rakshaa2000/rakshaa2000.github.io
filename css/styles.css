@@ -10239,7 +10239,7 @@ form .row:first-child .floating-label-form-group {
 .mentor{
   width: 250px;
   padding: 5px 5px 5px 5px;
-  background: radial-gradient(farthest-corner at 0px 0px, rgba(255, 255, 255, 0.75), rgba(241, 240, 238, 0.4));
+  background: radial-gradient(farthest-corner at 0px 0px, rgba(233, 101, 250, 0.75), rgba(199, 197, 197, 0.527));
   color: #000;
   margin: 5px;
   border-radius: 5px;
@@ -10247,7 +10247,7 @@ form .row:first-child .floating-label-form-group {
 .mentor:hover{
   width: 250px;
   padding: 5px 5px 5px 5px;
-  background: radial-gradient(farthest-corner at 0px 0px, rgb(255, 229, 229), rgba(240, 219, 255, 0.671));
+  background: radial-gradient(farthest-corner at 0px 0px, rgb(138, 56, 128), rgba(199, 132, 247, 0.671));
   color: #000;
   font-weight: bold;
 }
