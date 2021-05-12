@@ -9966,7 +9966,7 @@ h3 {
   }
 }
 .page-section {
-  padding: 6rem 0;
+  padding: 6rem 0rem;
 }
 .page-section .page-section-heading {
   font-size: 2.25rem;
@@ -10281,9 +10281,17 @@ form .row:first-child .floating-label-form-group {
 .lead-1{
   background: radial-gradient(farthest-corner at 0px 0px,rgba(255, 255, 255,0.8),rgba(250, 235, 215, 0.514));
   color: #000;
-  padding: 5px;
+  padding: 10px;
   border: #fff  1px;
   border-radius: 5px;
+  width: 350px;
+  height: 200px;
+  margin: 10px;
+}
+.exp{
+  justify-content: start;
+  justify-items: start;
+  flex-wrap: wrap;
 }
 .lead-2{
   background-color: rgba(250, 235, 215, 0.671);
