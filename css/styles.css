@@ -13,7 +13,8 @@
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
-  --primary: #9b59b6;
+  --violet:  #9b59b6;
+  --primary: #8f3c5e;
   --secondary: #2c3e50;
   --success: #28a745;
   --info: #17a2b8;
@@ -2426,8 +2427,8 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #9b59b6;
-  border-color: #9b59b6;
+  background-color: var(--primary);
+  border-color: var(--primary);
 }
 .btn-primary:hover {
   color: #fff;
@@ -2442,13 +2443,13 @@ fieldset:disabled a.btn {
 }
 .btn-primary.disabled, .btn-primary:disabled {
   color: #fff;
-  background-color: #9b59b6;
-  border-color: #9b59b6;
+  background-color: var(--primary);
+  border-color: var(--primary);
 }
 .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #9b59b6;
-  border-color: #9b59b6;
+  background-color: var(--primary);
+  border-color: var(--primary);
 }
 .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(143, 60, 198, 0.5);
@@ -2456,8 +2457,8 @@ fieldset:disabled a.btn {
 
 .btn-secondary {
   color: #fff;
-  background-color: #2c3e50;
-  border-color: #2c3e50;
+  background-color: var(--secondary);
+  border-color: var(--secondary);
 }
 .btn-secondary:hover {
   color: #fff;
@@ -2472,8 +2473,8 @@ fieldset:disabled a.btn {
 }
 .btn-secondary.disabled, .btn-secondary:disabled {
   color: #fff;
-  background-color: #2c3e50;
-  border-color: #2c3e50;
+  background-color: var(--secondary);
+  border-color: var(--secondary);
 }
 .btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active, .show > .btn-secondary.dropdown-toggle {
   color: #fff;
@@ -2690,25 +2691,25 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-secondary {
-  color: #2c3e50;
-  border-color: #2c3e50;
+  color: var(--secondary);
+  border-color: var(--secondary);
 }
 .btn-outline-secondary:hover {
   color: #fff;
-  background-color: #2c3e50;
-  border-color: #2c3e50;
+  background-color: var(--secondary);
+  border-color: var(--secondary);
 }
 .btn-outline-secondary:focus, .btn-outline-secondary.focus {
   box-shadow: 0 0 0 0.2rem rgba(44, 62, 80, 0.5);
 }
 .btn-outline-secondary.disabled, .btn-outline-secondary:disabled {
-  color: #2c3e50;
+  color: var(--secondary);
   background-color: transparent;
 }
 .btn-outline-secondary:not(:disabled):not(.disabled):active, .btn-outline-secondary:not(:disabled):not(.disabled).active, .show > .btn-outline-secondary.dropdown-toggle {
   color: #fff;
-  background-color: #2c3e50;
-  border-color: #2c3e50;
+  background-color: var(--secondary);
+  border-color: var(--secondary);
 }
 .btn-outline-secondary:not(:disabled):not(.disabled):active:focus, .btn-outline-secondary:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-secondary.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(44, 62, 80, 0.5);
@@ -4683,7 +4684,7 @@ a.badge-primary:focus, a.badge-primary.focus {
 
 .badge-secondary {
   color: #fff;
-  background-color: #2c3e50;
+  background-color: var(--secondary);
 }
 a.badge-secondary:hover, a.badge-secondary:focus {
   color: #fff;
@@ -6061,7 +6062,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-  background-color: #9b59b6 !important;
+  background-color: var(--primary) !important;
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
@@ -6071,7 +6072,7 @@ button.bg-primary:focus {
 }
 
 .bg-secondary {
-  background-color: #2c3e50 !important;
+  background-color: var(--secondary) !important;
 }
 
 a.bg-secondary:hover, a.bg-secondary:focus,
@@ -6193,7 +6194,7 @@ button.bg-dark:focus {
 }
 
 .border-secondary {
-  border-color: #2c3e50 !important;
+  border-color: var(--secondary) !important;
 }
 
 .border-success {
@@ -9771,7 +9772,7 @@ a.text-primary:hover, a.text-primary:focus {
 }
 
 .text-secondary {
-  color: #2c3e50 !important;
+  color: var(--secondary) !important;
 }
 
 a.text-secondary:hover, a.text-secondary:focus {
@@ -9990,9 +9991,9 @@ h3 {
   width: 100%;
   max-width: 7rem;
   height: 0.25rem;
-  background-color: #2c3e50;
+  background-color: var(--secondary);
   border-radius: 1rem;
-  border-color: #2c3e50 !important;
+  border-color: var(--secondary) !important;
 }
 .divider-custom .divider-custom-line:first-child {
   margin-right: 1rem;
@@ -10001,7 +10002,7 @@ h3 {
   margin-left: 1rem;
 }
 .divider-custom .divider-custom-icon {
-  color: #2c3e50 !important;
+  color: var(--secondary) !important;
   font-size: 2rem;
 }
 .divider-custom.divider-light .divider-custom-line {
@@ -10055,13 +10056,13 @@ h3 {
   color: #fff;
 }
 #mainNav .navbar-nav li.nav-item a.nav-link:hover {
-  color: #9b59b6;
+  color: var(--primary);
 }
 #mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
   color: #fff;
 }
 #mainNav .navbar-nav li.nav-item a.nav-link.active {
-  color: #9b59b6;
+  color: var(--primary);
 }
 #mainNav .navbar-toggler {
   font-size: 80%;
@@ -10083,11 +10084,11 @@ h3 {
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
     color: #fff;
-    background: #9b59b6;
+    background: var(--primary);
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
     color: #fff;
-    background: #9b59b6;
+    background: var(--primary);
   }
 
   #mainNav.navbar-shrink {
@@ -10172,7 +10173,7 @@ h3 {
   top: 1rem;
   font-size: 3rem;
   line-height: 3rem;
-  color: #9b59b6;
+  color: var(--primary);
   opacity: 1;
 }
 
@@ -10225,7 +10226,7 @@ form .row:first-child .floating-label-form-group {
 .footer {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-color: #2c3e50;
+  background-color: var(--secondary);
   color: #fff;
 }
 
@@ -10239,7 +10240,7 @@ form .row:first-child .floating-label-form-group {
 .mentor{
   width: 250px;
   padding: 5px 5px 5px 5px;
-  background: radial-gradient(farthest-corner at 0px 0px, rgba(233, 101, 250, 0.75), rgba(199, 197, 197, 0.527));
+  background: radial-gradient(farthest-corner at 0px 0px, rgba(189, 162, 177, 0.75), rgba(196, 59, 123, 0.527));
   color: #000;
   margin: 5px;
   border-radius: 5px;
@@ -10247,7 +10248,7 @@ form .row:first-child .floating-label-form-group {
 .mentor:hover{
   width: 250px;
   padding: 5px 5px 5px 5px;
-  background: radial-gradient(farthest-corner at 0px 0px, rgb(138, 56, 128), rgba(199, 132, 247, 0.671));
+  background: radial-gradient(farthest-corner at 0px 0px, rgb(214, 56, 135), rgba(187, 163, 178, 0.671));
   color: #000;
   font-weight: bold;
 }
