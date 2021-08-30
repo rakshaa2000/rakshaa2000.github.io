@@ -10252,6 +10252,9 @@ form .row:first-child .floating-label-form-group {
   color: #000;
   font-weight: bold;
 }
+.ma:hover{
+  text-decoration: none;
+}
 .mentor img{
   border-radius: 2px;
   padding: 2%;
