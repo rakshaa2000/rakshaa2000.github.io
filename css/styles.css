@@ -10240,7 +10240,7 @@ form .row:first-child .floating-label-form-group {
 .mentor{
   width: 250px;
   padding: 5px 5px 5px 5px;
-  background: radial-gradient(farthest-corner at 0px 0px, rgba(189, 162, 177, 0.75), rgba(196, 59, 123, 0.527));
+  background: radial-gradient(farthest-corner at 0px 0px, rgba(255, 255, 255, 0.514), rgba(196, 59, 123, 0.623));
   color: #000;
   margin: 5px;
   border-radius: 5px;
@@ -10248,7 +10248,7 @@ form .row:first-child .floating-label-form-group {
 .mentor:hover{
   width: 250px;
   padding: 5px 5px 5px 5px;
-  background: radial-gradient(farthest-corner at 0px 0px, rgb(214, 56, 135), rgba(187, 163, 178, 0.671));
+  background: radial-gradient(farthest-corner at 0px 0px, rgb(238, 99, 169), rgba(187, 163, 178, 0.671));
   color: #000;
   font-weight: bold;
 }
@@ -10309,4 +10309,9 @@ form .row:first-child .floating-label-form-group {
   -webkit-box-shadow: 0 10px 6px -6px #777;
      -moz-box-shadow: 0 10px 6px -6px #777;
           box-shadow: 0 10px 6px -6px #777;
+}
+/* Cursor */
+.txt-type > .txt {
+  border-right: 0.2rem solid var(--gray-dark);
+  color:rgb(253, 253, 253); 
 }
