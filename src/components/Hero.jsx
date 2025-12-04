@@ -41,6 +41,18 @@ const Hero = () => {
                         className="cta-button"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
+                        onClick={(e) => {
+                            e.preventDefault();
+                            const element = document.getElementById("projects");
+
+                            if (element) {
+                                const offsetTop = element.offsetTop;
+                                window.scrollTo({
+                                    top: offsetTop - 32, // Small offset for breathing room
+                                    behavior: 'smooth'
+                                });
+                            }
+                        }}
                     >
                         Check out my work
                     </motion.a>
