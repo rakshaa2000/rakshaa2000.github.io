@@ -1,0 +1,26 @@
+.footer {
+    padding: 2rem 0;
+    text-align: center;
+    background-color: var(--bg-secondary);
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-socials {
+    margin-bottom: 0;
+}
+
+.copyright {
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.copyright:hover {
+    color: var(--accent-color);
+}

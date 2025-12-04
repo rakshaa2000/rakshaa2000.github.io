@@ -1,0 +1,168 @@
+.education-grid {
+    width: 100%;
+    margin: 0 0 4rem 0;
+}
+
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.glass-card:hover {
+    box-shadow: 0 8px 30px rgba(192, 132, 252, 0.15);
+    border-color: var(--accent-color);
+}
+
+.education-card {
+    border-left: 4px solid var(--accent-color);
+}
+
+.edu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.edu-degree {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.edu-duration {
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 0.9rem;
+    color: var(--accent-color);
+}
+
+.edu-institution {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.edu-details {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.certifications-container {
+    width: 100%;
+    margin: 0;
+}
+
+.cert-tabs-wrapper {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.cert-tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    min-width: 280px;
+    position: relative;
+}
+
+.cert-tab {
+    padding: 1rem 1.5rem;
+    background: transparent;
+    border: none;
+    border-left: 2px solid var(--border-color);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    text-align: left;
+    white-space: normal;
+    line-height: 1.4;
+}
+
+.cert-tab:hover {
+    color: var(--text-primary);
+    background: rgba(192, 132, 252, 0.05);
+}
+
+.cert-tab.active {
+    color: var(--accent-color);
+    border-left-color: var(--accent-color);
+    background: rgba(192, 132, 252, 0.08);
+    font-weight: 600;
+}
+
+.cert-content {
+    flex: 1;
+    min-height: 200px;
+}
+
+.certifications-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: flex-start;
+}
+
+.cert-tag {
+    background: var(--glass-bg);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 2px;
+    transition: all 0.3s ease;
+}
+
+.cert-tag:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 2px 8px rgba(192, 132, 252, 0.15);
+}
+
+.cert-tag-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.3;
+}
+
+.cert-tag-issuer {
+    font-size: 0.75rem;
+    color: var(--accent-color);
+    line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+    .cert-tabs-wrapper {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .cert-tabs {
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-width: auto;
+        border-bottom: 2px solid var(--border-color);
+    }
+
+    .cert-tab {
+        border-left: none;
+        border-bottom: 2px solid transparent;
+        padding: 0.75rem 1rem;
+    }
+
+    .cert-tab.active {
+        border-left: none;
+        border-bottom-color: var(--accent-color);
+    }
+}

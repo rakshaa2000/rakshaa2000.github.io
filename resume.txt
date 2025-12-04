@@ -1,0 +1,111 @@
+Rakshaa Viswanathan
+rakshaa.dev | linkedin.com/in/rakshaa-viswanathan
+hi@rakshaa.dev | +91-75986 00169 | Bengaluru, India
+
+EDUCATION
+
+EXPERIENCE
+
+NIT TRICHY
+
+MICROSOFT | Software Engineer
+
+B.Tech – Electrical &
+Electronics Engineering
+
+Jun 2022 – Present | Bengaluru, India
+
+2018 – 2022 | Tiruchirappalli
+Minor in Computer Science & Engineering
+CGPA: 8.51 / 10 (Distinction)
+
+SKILLS
+PROGRAMMING
+C++ • Java • Python
+C# • .NET
+Golang • JavaScript
+Node.js • React.js
+MongoDB • SQL • KQL
+
+SYSTEMS & CLOUD
+Linux (Kernel, SysAdmin) • Azure
+Distributed Systems • Microservices
+APIs (REST, GraphQL)
+Observability (Kusto)
+CI/CD Pipelines (Azure DevOps)
+
+OTHER
+IoT • Machine Learning & Deep Learning
+Leadership & Mentoring
+Technical Writing (IEEE, blogs)
+
+CERTIFICATIONS
+Algorithmic Toolbox – UC San Diego
+Deep Learning Specialization –
+DeepLearning.AI
+Machine Learning – Stanford Online
+
+Azure Sovereign Platform Apr 2024 – Present
+• Developed the Azure Dependency Service Graph with GraphQL, Cosmos DB,
+and Kusto, enabling real-time dependency analysis across 10k+ Azure
+services. Reduced incident resolution time by 30%.
+• Led all the engineering for API upgrades in CloudSprout (schema versioning,
+caching, performance optimization), increasing adoption by 40% and reducing
+developer onboarding time by 25%.
+• Designed an event-driven configuration pipeline with Apache Kafka and
+AzPubSub, lowering propagation latency by 70% across sovereign regions and
+scaling to millions of events daily.
+• Created the CloudSprout AI Assistant, supporting onboarding for 10k+
+configurations and services with automated query handling.
+
+Azure Linux Jun 2022 – Apr 2024
+• Delivered critical security, performance, and reliability improvements for
+Azure Linux, deployed to 100k+ servers powering Azure cloud and edge.
+• Built automated validation and release pipelines in Linux, Python, React,
+JavaScript, cutting regressions by 35% and accelerating deployments by 20%.
+
+MICROSOFT | Software Engineering Intern
+Jun 2021 – Jul 2021 | Bengaluru, India
+• Designed a distributed compilation system for CBL-Mariner by parallelizing
+build pipelines, reducing build times by 33%.
+• Enhanced build farm orchestration using Golang & Linux virtualization,
+boosting throughput and improving resilience in CI/CD workflows.
+
+NIT TRICHY | Research Intern
+
+PUBLICATIONS
+
+Dec 2019 – Nov 2020
+• Proposed and implemented a low-voltage DC Pico-grid for rural healthcare
+centres in Tamil Nadu, improving power reliability by 50%.
+• Conducted comprehensive MATLAB & Simulink simulations; results published
+in IEEE and cited in microgrid research.
+
+Low Voltage DC Mini-grid for Isolated
+Healthcare Centres – IEEE (2021)
+
+LEADERSHIP & PROJECTS
+
+AWARDS
+Azure SPT Spot Award – for platform
+reliability
+yuHacks – Bonus Prize (Cloud category)
+Wolfram Award – Algorithm innovation
+Hack Solstice – Popular Choice
+Quantahacks – echoAR Winner (Top 1%)
+
+Community Leadership
+• Founded Superposition Chennai, scaling to 300+ members with coding
+workshops, peer learning, and structured mentorship.
+• Directed Kurinji Hacks, Chennai’s largest hackathon for gender minorities with
+500+ participants and a 95% project completion rate.
+• Mentored and judged at 50+ global hackathons (MLH, Girls in Tech),
+supporting the growth of 1,500+ student developers from underrepresented
+groups.
+Select Technical Projects
+• Safe Space Bot – AI-powered chatbot for harassment detection (Python +
+NLP); adopted at multiple hackathons with 200+ active users.
+• Woomb – Full-stack women’s health platform (React, Node.js, MongoDB);
+reached 1k+ demo users in university and hackathon showcases.
+
+

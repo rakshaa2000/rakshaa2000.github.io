@@ -1,0 +1,110 @@
+.experience-container {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    gap: 4rem;
+}
+
+.experience-tabs {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 220px;
+}
+
+.tab-button {
+    text-align: left;
+    padding: 12px 20px;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    border-left: 2px solid var(--border-color);
+    transition: all 0.3s ease;
+    height: 48px;
+    display: flex;
+    align-items: center;
+}
+
+.tab-button:hover,
+.tab-button.active {
+    color: var(--accent-color);
+    background-color: rgba(192, 132, 252, 0.05);
+}
+
+.tab-highlight {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 48px;
+    background-color: var(--accent-color);
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 10px var(--accent-color);
+}
+
+.experience-content {
+    flex: 1;
+}
+
+.experience-content>div {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.exp-role {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 0.8rem;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+}
+
+.exp-duration {
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 0.9rem;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    background: rgba(192, 132, 252, 0.1);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+}
+
+.exp-description {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .experience-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .experience-tabs {
+        flex-direction: row;
+        overflow-x: auto;
+        border-bottom: 2px solid var(--border-color);
+        border-left: none;
+        min-width: auto;
+    }
+
+    .tab-button {
+        border-left: none;
+        border-bottom: 2px solid transparent;
+        min-width: 140px;
+        justify-content: center;
+    }
+
+    .tab-highlight {
+        display: none;
+    }
+
+    .tab-button.active {
+        border-bottom: 2px solid var(--accent-color);
+    }
+}
