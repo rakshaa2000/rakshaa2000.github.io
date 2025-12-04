@@ -8,8 +8,6 @@ const Hackathons = () => {
         <section id="hackathons" className="section hackathons-section">
             <div className="container">
                 <h2 className="section-title">Mentorship & Community</h2>
-                <p className="section-subtitle text-center">Hackathons I've mentored and judged</p>
-
                 <div className="hackathons-grid">
                     {hackathonsData.map((hackathon, index) => (
                         <motion.div
