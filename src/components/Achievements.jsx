@@ -7,7 +7,7 @@ const Achievements = () => {
     return (
         <section id="achievements" className="section achievements-section">
             <div className="container">
-                <h2 className="section-title">Achievements</h2>
+                <h2 className="section-title">Few Feathers In My Cap</h2>
                 <div className="achievements-grid">
                     {achievementsData.map((item, index) => (
                         <motion.div

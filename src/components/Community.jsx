@@ -26,7 +26,7 @@ const Community = () => {
                     ))}
                 </div>
 
-                <h3 className="subsection-title">Few Hackathons mentored and judged</h3>
+                <h3 className="subsection-title">Hackathons Mentored and Judged</h3>
 
                 <div className="hackathons-grid">
                     {hackathonsData.map((hackathon, index) => (
