@@ -54,7 +54,7 @@ export const experienceData = [
   },
   {
     role: "SWE Intern",
-    company: "Microsoft (Internship)",
+    company: "Microsoft",
     duration: "Jun 2021 - July 2021",
     description: "Designed a distributed compilation system for CBL-Mariner by parallelizing build pipelines, reducing build times by 33%. Enhanced build farm orchestration using Golang & Linux virtualization.",
     icon: "💻"
