@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaDownload } from 'react-icons/fa';
+import { FaDownload, FaHome, FaUser, FaBriefcase, FaCode, FaGraduationCap, FaTrophy, FaHandsHelping, FaEnvelope, FaLaptopCode } from 'react-icons/fa';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -28,14 +28,14 @@ const Navbar = () => {
     }, []);
 
     const navLinks = [
-        { name: 'Home', href: '#hero' },
-        { name: 'About', href: '#about' },
-        { name: 'Experience', href: '#experience' },
-        { name: 'Projects', href: '#projects' },
-        { name: 'Education', href: '#education' },
-        { name: 'Achievements', href: '#achievements' },
-        { name: 'Community', href: '#community' },
-        { name: 'Contact', href: '#contact' },
+        { name: 'Home', href: '#hero', icon: <FaHome /> },
+        { name: 'About', href: '#about', icon: <FaUser /> },
+        { name: 'Experience', href: '#experience', icon: <FaBriefcase /> },
+        { name: 'Projects', href: '#projects', icon: <FaCode /> },
+        { name: 'Education', href: '#education', icon: <FaGraduationCap /> },
+        { name: 'Achievements', href: '#achievements', icon: <FaTrophy /> },
+        { name: 'Community', href: '#community', icon: <FaHandsHelping /> },
+        { name: 'Contact', href: '#contact', icon: <FaEnvelope /> },
     ];
 
     const scrollToSection = (e, href) => {
@@ -55,7 +55,9 @@ const Navbar = () => {
     return (
         <nav className={`navbar-vertical ${scrolled ? 'scrolled' : ''}`}>
             <div className="nav-brand">
-                <h2>RV</h2>
+                <div className="brand-icon">
+                    <FaLaptopCode />
+                </div>
             </div>
 
             <div className="nav-links-vertical">
@@ -68,6 +70,7 @@ const Navbar = () => {
                     >
                         <span className="nav-indicator"></span>
                         <span className="nav-text">{link.name}</span>
+                        <span className="nav-icon">{link.icon}</span>
                     </a>
                 ))}
             </div>

@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaTwitter, FaDev } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTwitter, FaDev, FaEnvelope } from 'react-icons/fa';
 import { SiDevpost } from 'react-icons/si';
 
 export const heroData = {
@@ -10,6 +10,7 @@ export const heroData = {
     { icon: FaGithub, url: "https://github.com/rakshaa2000", label: "GitHub" },
     { icon: FaLinkedin, url: "https://www.linkedin.com/in/rakshaa-viswanathan-0aa891199/", label: "LinkedIn" },
     { icon: SiDevpost, url: "https://devpost.com/rakshaa2000", label: "Devpost" },
+    { icon: FaEnvelope, url: "mailto:hi@rakshaa.dev", label: "Email" },
   ]
 };
 

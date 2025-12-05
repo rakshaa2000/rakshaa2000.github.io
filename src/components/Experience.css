@@ -1,110 +1,101 @@
-.experience-container {
-    display: flex;
-    width: 100%;
-    margin: 0;
-    gap: 4rem;
-}
-
-.experience-tabs {
+.timeline-container {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    min-width: 220px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 2rem 0;
 }
 
-.tab-button {
-    text-align: left;
-    padding: 12px 20px;
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-    border-left: 2px solid var(--border-color);
-    transition: all 0.3s ease;
-    height: 48px;
-    display: flex;
-    align-items: center;
-}
-
-.tab-button:hover,
-.tab-button.active {
-    color: var(--accent-color);
-    background-color: rgba(192, 132, 252, 0.05);
-}
-
-.tab-highlight {
+.timeline-container::before {
+    content: '';
     position: absolute;
     left: 0;
     top: 0;
+    height: 100%;
     width: 2px;
-    height: 48px;
-    background-color: var(--accent-color);
-    transition: transform 0.3s ease;
+    background: rgba(192, 132, 252, 0.2);
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 3rem;
+    margin-bottom: 3rem;
+    width: 100%;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -4px;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent-color);
     box-shadow: 0 0 10px var(--accent-color);
 }
 
-.experience-content {
-    flex: 1;
-}
-
-.experience-content>div {
+.timeline-content {
     background: var(--glass-bg);
     backdrop-filter: blur(16px);
     border: 1px solid var(--glass-border);
-    border-radius: 20px;
-    padding: 2.5rem;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    border-color: rgba(192, 132, 252, 0.3);
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
 .exp-role {
-    font-size: 1.5rem;
-    font-weight: 800;
-    margin-bottom: 0.8rem;
+    font-size: 1.25rem;
+    font-weight: 700;
     color: var(--text-primary);
-    letter-spacing: -0.01em;
+    margin: 0;
 }
 
 .exp-duration {
     font-family: 'SF Mono', 'Fira Code', monospace;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--accent-color);
-    margin-bottom: 1.5rem;
-    display: inline-block;
     background: rgba(192, 132, 252, 0.1);
-    padding: 0.2rem 0.5rem;
+    padding: 0.2rem 0.6rem;
     border-radius: 4px;
+    white-space: nowrap;
 }
 
 .exp-description {
     color: var(--text-secondary);
-    font-size: 1.05rem;
-    line-height: 1.7;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
 }
 
 @media (max-width: 768px) {
-    .experience-container {
+    .timeline-container {
+        padding-left: 0;
+    }
+
+    .timeline-header {
         flex-direction: column;
-        gap: 2rem;
+        gap: 0.8rem;
     }
 
-    .experience-tabs {
-        flex-direction: row;
-        overflow-x: auto;
-        border-bottom: 2px solid var(--border-color);
-        border-left: none;
-        min-width: auto;
-    }
-
-    .tab-button {
-        border-left: none;
-        border-bottom: 2px solid transparent;
-        min-width: 140px;
-        justify-content: center;
-    }
-
-    .tab-highlight {
-        display: none;
-    }
-
-    .tab-button.active {
-        border-bottom: 2px solid var(--accent-color);
+    .timeline-content {
+        padding: 1.5rem;
     }
 }

@@ -4,44 +4,33 @@ import { experienceData } from '../data/content';
 import './Experience.css';
 
 const Experience = () => {
-    const [activeTab, setActiveTab] = useState(0);
-
     return (
         <section id="experience" className="section experience-section">
             <div className="container">
                 <h2 className="section-title">Where I've Worked</h2>
 
-                <div className="experience-container">
-                    <div className="experience-tabs">
-                        {experienceData.map((exp, index) => (
-                            <button
-                                key={index}
-                                className={`tab-button ${activeTab === index ? 'active' : ''}`}
-                                onClick={() => setActiveTab(index)}
-                            >
-                                {exp.company}
-                            </button>
-                        ))}
-                        <div
-                            className="tab-highlight"
-                            style={{ transform: `translateY(${activeTab * 42}px)` }}
-                        />
-                    </div>
-
-                    <div className="experience-content">
+                <div className="timeline-container">
+                    {experienceData.map((exp, index) => (
                         <motion.div
-                            key={activeTab}
-                            initial={{ opacity: 0, x: 20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.3 }}
+                            key={index}
+                            className="timeline-item"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
                         >
-                            <h3 className="exp-role">
-                                {experienceData[activeTab].role} <span className="text-accent">@ {experienceData[activeTab].company}</span>
-                            </h3>
-                            <p className="exp-duration">{experienceData[activeTab].duration}</p>
-                            <p className="exp-description">{experienceData[activeTab].description}</p>
+                            <div className="timeline-dot"></div>
+                            <div className="timeline-content">
+                                <div className="timeline-header">
+                                    <h3 className="exp-role">
+                                        {exp.role} <span className="text-accent">@ {exp.company}</span>
+                                    </h3>
+                                    <span className="exp-duration">{exp.duration}</span>
+                                </div>
+                                <p className="exp-description">{exp.description}</p>
+                            </div>
                         </motion.div>
-                    </div>
+                    ))}
                 </div>
             </div>
         </section>

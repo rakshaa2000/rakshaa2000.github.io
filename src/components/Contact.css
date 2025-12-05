@@ -126,6 +126,32 @@
     box-shadow: 0 8px 20px rgba(192, 132, 252, 0.4);
 }
 
+.submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.form-status {
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.form-status.success {
+    background: rgba(46, 213, 115, 0.1);
+    color: #2ed573;
+    border: 1px solid rgba(46, 213, 115, 0.2);
+}
+
+.form-status.error {
+    background: rgba(255, 71, 87, 0.1);
+    color: #ff4757;
+    border: 1px solid rgba(255, 71, 87, 0.2);
+}
+
 @media (max-width: 968px) {
     .contact-wrapper {
         grid-template-columns: 1fr;

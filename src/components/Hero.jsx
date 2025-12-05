@@ -36,26 +36,37 @@ const Hero = () => {
                         ))}
                     </div>
 
-                    <motion.a
-                        href="#projects"
-                        className="cta-button"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        onClick={(e) => {
-                            e.preventDefault();
-                            const element = document.getElementById("projects");
+                    <div className="hero-cta">
+                        <motion.a
+                            href="#projects"
+                            className="cta-button"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            onClick={(e) => {
+                                e.preventDefault();
+                                const element = document.getElementById("projects");
 
-                            if (element) {
-                                const offsetTop = element.offsetTop;
-                                window.scrollTo({
-                                    top: offsetTop - 32, // Small offset for breathing room
-                                    behavior: 'smooth'
-                                });
-                            }
-                        }}
-                    >
-                        Check out my work
-                    </motion.a>
+                                if (element) {
+                                    const offsetTop = element.offsetTop;
+                                    window.scrollTo({
+                                        top: offsetTop - 32, // Small offset for breathing room
+                                        behavior: 'smooth'
+                                    });
+                                }
+                            }}
+                        >
+                            Check out my work
+                        </motion.a>
+                        <motion.a
+                            href="/Rakshaa Resume 2025.pdf"
+                            download
+                            className="cta-button outline"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                        >
+                            Resume
+                        </motion.a>
+                    </div>
                 </motion.div>
             </div>
         </section>

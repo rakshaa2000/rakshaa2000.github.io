@@ -89,3 +89,30 @@
     color: var(--text-secondary);
     line-height: 1.6;
 }
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .project-card {
+        max-width: 100%;
+    }
+
+    .project-image-container {
+        height: 200px;
+    }
+
+    .project-info {
+        padding: 1.5rem;
+    }
+
+    .project-title {
+        font-size: 1.2rem;
+    }
+
+    .project-description {
+        font-size: 0.95rem;
+    }
+}

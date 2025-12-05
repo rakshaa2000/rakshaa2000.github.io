@@ -5,6 +5,7 @@ import { heroData } from '../data/content';
 import './Contact.css';
 
 const Contact = () => {
+    const [status, setStatus] = useState(''); // '', 'submitting', 'success', 'error'
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -19,11 +20,35 @@ const Contact = () => {
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Create mailto link with form data
-        const mailtoLink = `mailto:${heroData.email}?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`)}`;
-        window.location.href = mailtoLink;
+        setStatus('submitting');
+
+        try {
+            const response = await fetch('https://formspree.io/f/mgepzogv', {
+                method: 'POST',
+                body: new FormData(e.target),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                setStatus('success');
+                setFormData({
+                    name: '',
+                    email: '',
+                    subject: '',
+                    message: ''
+                });
+                // Clear success message after 5 seconds
+                setTimeout(() => setStatus(''), 5000);
+            } else {
+                setStatus('error');
+            }
+        } catch (error) {
+            setStatus('error');
+        }
     };
 
     return (
@@ -66,6 +91,17 @@ const Contact = () => {
                         transition={{ duration: 0.5 }}
                         viewport={{ once: true }}
                     >
+                        {status === 'success' && (
+                            <div className="form-status success">
+                                Message sent successfully!
+                            </div>
+                        )}
+                        {status === 'error' && (
+                            <div className="form-status error">
+                                Something went wrong. Please try again.
+                            </div>
+                        )}
+
                         <div className="form-group">
                             <input
                                 type="text"
@@ -110,8 +146,8 @@ const Contact = () => {
                             ></textarea>
                         </div>
 
-                        <button type="submit" className="submit-btn">
-                            Send Message
+                        <button type="submit" className="submit-btn" disabled={status === 'submitting'}>
+                            {status === 'submitting' ? 'Sending...' : 'Send Message'}
                         </button>
                     </motion.form>
                 </div>

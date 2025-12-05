@@ -14,9 +14,24 @@ main {
   transition: margin-left 0.3s ease;
 }
 
+.footer {
+  padding-left: 15% !important;
+  transition: padding-left 0.3s ease;
+}
+
+@media (max-width: 1440px) {
+  .footer {
+    padding-left: 20% !important;
+  }
+}
+
 @media (max-width: 768px) {
   main {
     margin-left: 0;
-    margin-bottom: 80px;
+    margin-bottom: 0;
+  }
+
+  .footer {
+    padding-left: 0 !important;
   }
 }
