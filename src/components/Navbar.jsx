@@ -10,6 +10,12 @@ const Navbar = () => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 50);
 
+            // Check if we've reached the bottom of the page
+            if ((window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 50) {
+                setActiveSection('contact');
+                return;
+            }
+
             // Update active section based on scroll position
             const sections = ['home', 'about', 'experience', 'projects', 'education', 'achievements', 'community', 'contact'];
             const current = sections.find(section => {
