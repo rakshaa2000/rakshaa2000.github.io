@@ -4,22 +4,20 @@ import './Navbar.css';
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
-    const [activeSection, setActiveSection] = useState('home');
+    const [activeSection, setActiveSection] = useState('hero');
 
     useEffect(() => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 50);
 
-            // Check if we've reached the bottom of the page
             if ((window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 50) {
                 setActiveSection('contact');
                 return;
             }
 
-            // Update active section based on scroll position
-            const sections = ['home', 'about', 'experience', 'projects', 'education', 'achievements', 'community', 'contact'];
+            const sections = ['hero', 'about', 'experience', 'projects', 'education', 'achievements', 'community', 'contact'];
             const current = sections.find(section => {
-                const element = document.getElementById(section === 'home' ? 'hero' : section);
+                const element = document.getElementById(section);
                 if (element) {
                     const rect = element.getBoundingClientRect();
                     return rect.top <= 100 && rect.bottom >= 100;
@@ -29,7 +27,8 @@ const Navbar = () => {
             if (current) setActiveSection(current);
         };
 
-        window.addEventListener('scroll', handleScroll);
+        handleScroll();
+        window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
@@ -50,43 +49,51 @@ const Navbar = () => {
         const element = document.getElementById(targetId);
 
         if (element) {
-            const offsetTop = element.offsetTop;
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const offsetTop = element.getBoundingClientRect().top + window.scrollY;
             window.scrollTo({
-                top: offsetTop - 32, // Small offset for breathing room
-                behavior: 'smooth'
+                top: offsetTop - 32,
+                behavior: prefersReducedMotion ? 'auto' : 'smooth'
             });
+            history.replaceState(null, '', href);
         }
     };
 
     return (
-        <nav className={`navbar-vertical ${scrolled ? 'scrolled' : ''}`}>
-            <div className="nav-brand">
-                <div className="brand-icon">
+        <nav className={`navbar-vertical ${scrolled ? 'scrolled' : ''}`} aria-label="Primary">
+            <a href="#hero" className="nav-brand" aria-label="Home" onClick={(e) => scrollToSection(e, '#hero')}>
+                <span className="brand-icon" aria-hidden="true">
                     <FaLaptopCode />
-                </div>
-            </div>
+                </span>
+            </a>
 
-            <div className="nav-links-vertical">
-                {navLinks.map((link, index) => (
-                    <a
-                        key={index}
-                        href={link.href}
-                        className={`nav-link ${activeSection === link.href.substring(1) ? 'active' : ''}`}
-                        onClick={(e) => scrollToSection(e, link.href)}
-                    >
-                        <span className="nav-indicator"></span>
-                        <span className="nav-text">{link.name}</span>
-                        <span className="nav-icon">{link.icon}</span>
-                    </a>
-                ))}
-            </div>
+            <ul className="nav-links-vertical">
+                {navLinks.map((link, index) => {
+                    const isActive = activeSection === link.href.substring(1);
+                    return (
+                        <li key={index}>
+                            <a
+                                href={link.href}
+                                className={`nav-link ${isActive ? 'active' : ''}`}
+                                onClick={(e) => scrollToSection(e, link.href)}
+                                aria-current={isActive ? 'true' : undefined}
+                            >
+                                <span className="nav-indicator" aria-hidden="true"></span>
+                                <span className="nav-text">{link.name}</span>
+                                <span className="nav-icon" aria-hidden="true">{link.icon}</span>
+                            </a>
+                        </li>
+                    );
+                })}
+            </ul>
 
             <a
                 href="/Rakshaa Resume 2025.pdf"
                 download
                 className="resume-download-btn"
+                aria-label="Download résumé (PDF)"
             >
-                <FaDownload />
+                <FaDownload aria-hidden="true" />
                 <span>Resume</span>
             </a>
         </nav>

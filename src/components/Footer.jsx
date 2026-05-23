@@ -16,12 +16,12 @@ const Footer = () => {
                             className="social-icon"
                             aria-label={link.label}
                         >
-                            <link.icon size={20} />
+                            <link.icon size={22} aria-hidden="true" />
                         </a>
                     ))}
                 </div>
                 <p className="copyright">
-                    Designed & Built by {heroData.name}
+                    © {new Date().getFullYear()} {heroData.name} · Built with React + Vite
                 </p>
             </div>
         </footer>

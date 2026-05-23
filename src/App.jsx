@@ -14,8 +14,9 @@ import './App.css';
 function App() {
   return (
     <div className="app">
+      <a href="#main-content" className="skip-link">Skip to content</a>
       <Navbar />
-      <main>
+      <main id="main-content">
         <Hero />
         <Skills />
         <Experience />

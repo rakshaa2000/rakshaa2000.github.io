@@ -2,14 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="https://fav.farm/💻"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0e1a" />
+
+    <!-- Favicon (self-hosted, SVG primary with raster fallbacks) -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
     <title>Rakshaa Viswanathan — Software Engineer Portfolio</title>
     <meta name="description" content="Rakshaa Viswanathan is a Software Engineer at Microsoft working on Azure, open-source contributor, and diversity advocate. Portfolio, projects, publications, and experience." />
     <meta name="author" content="Rakshaa Viswanathan" />
     <meta name="keywords" content="Rakshaa Viswanathan, Software Engineer, Microsoft, Azure, Portfolio, Open Source, Bengaluru" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://rakshaa.dev/" />
+
+    <!-- Preconnect for Google Fonts (Inter loaded via CSS in components) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -18,12 +29,20 @@
     <meta property="og:description" content="Software Engineer at Microsoft (Azure), open-source contributor, and diversity advocate. Portfolio, projects, and experience." />
     <meta property="og:site_name" content="Rakshaa Viswanathan" />
     <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content="https://rakshaa.dev/og-image.png" />
+    <meta property="og:image:secure_url" content="https://rakshaa.dev/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Rakshaa Viswanathan — Software Engineer at Microsoft Azure" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://rakshaa.dev/" />
     <meta name="twitter:title" content="Rakshaa Viswanathan — Software Engineer Portfolio" />
     <meta name="twitter:description" content="Software Engineer at Microsoft (Azure), open-source contributor, and diversity advocate. Portfolio, projects, and experience." />
+    <meta name="twitter:image" content="https://rakshaa.dev/og-image.png" />
+    <meta name="twitter:image:alt" content="Rakshaa Viswanathan — Software Engineer at Microsoft Azure" />
 
     <!-- JSON-LD: Person schema for Google Knowledge Graph -->
     <script type="application/ld+json">
@@ -32,11 +51,14 @@
       "@type": "Person",
       "name": "Rakshaa Viswanathan",
       "url": "https://rakshaa.dev/",
+      "image": "https://rakshaa.dev/og-image.png",
+      "description": "Software Engineer at Microsoft working on Azure, open-source contributor, and diversity advocate.",
       "email": "hi@rakshaa.dev",
       "jobTitle": "Software Engineer",
       "worksFor": { "@type": "Organization", "name": "Microsoft" },
       "alumniOf": { "@type": "CollegeOrUniversity", "name": "National Institute of Technology, Tiruchirappalli" },
       "address": { "@type": "PostalAddress", "addressLocality": "Bengaluru", "addressCountry": "IN" },
+      "knowsAbout": ["Azure", "Distributed Systems", "GraphQL", "Kafka", "Linux", "Open Source"],
       "sameAs": [
         "https://github.com/rakshaa2000",
         "https://www.linkedin.com/in/rakshaa-viswanathan-0aa891199/",
@@ -44,9 +66,21 @@
       ]
     }
     </script>
+
+    <!-- JSON-LD: WebSite for Sitelinks Searchbox eligibility -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "https://rakshaa.dev/",
+      "name": "Rakshaa Viswanathan",
+      "inLanguage": "en"
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
+    <noscript>This portfolio requires JavaScript. View the source content at <a href="https://github.com/rakshaa2000">github.com/rakshaa2000</a>.</noscript>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
