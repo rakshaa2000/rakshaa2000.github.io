@@ -10,28 +10,24 @@
 main {
   flex: 1;
   width: 100%;
-  margin-left: 200px;
+  margin-left: var(--nav-width);
   transition: margin-left 0.3s ease;
 }
 
 .footer {
-  padding-left: 15% !important;
-  transition: padding-left 0.3s ease;
-}
-
-@media (max-width: 1440px) {
-  .footer {
-    padding-left: 20% !important;
-  }
+  margin-left: var(--nav-width);
+  transition: margin-left 0.3s ease;
 }
 
 @media (max-width: 768px) {
   main {
     margin-left: 0;
-    margin-bottom: 0;
+    /* Reserve space so the fixed bottom navbar doesn't cover content */
+    padding-bottom: 80px;
   }
 
   .footer {
-    padding-left: 0 !important;
+    margin-left: 0;
+    padding-bottom: 80px;
   }
 }

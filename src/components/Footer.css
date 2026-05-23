@@ -2,6 +2,7 @@
     padding: 2rem 0;
     text-align: center;
     background-color: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
 }
 
 .footer-container {
@@ -16,11 +17,7 @@
 }
 
 .copyright {
-    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-family: var(--font-mono);
     font-size: 0.8rem;
     color: var(--text-secondary);
-}
-
-.copyright:hover {
-    color: var(--accent-color);
 }

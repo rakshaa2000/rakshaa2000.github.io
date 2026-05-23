@@ -47,10 +47,11 @@ const Hero = () => {
                                 const element = document.getElementById("projects");
 
                                 if (element) {
-                                    const offsetTop = element.offsetTop;
+                                    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                                    const offsetTop = element.getBoundingClientRect().top + window.scrollY;
                                     window.scrollTo({
-                                        top: offsetTop - 32, // Small offset for breathing room
-                                        behavior: 'smooth'
+                                        top: offsetTop - 32,
+                                        behavior: prefersReducedMotion ? 'auto' : 'smooth'
                                     });
                                 }
                             }}

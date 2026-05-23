@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaEnvelope, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
+import { FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import { heroData } from '../data/content';
 import './Contact.css';
 
@@ -41,7 +41,6 @@ const Contact = () => {
                     subject: '',
                     message: ''
                 });
-                // Clear success message after 5 seconds
                 setTimeout(() => setStatus(''), 5000);
             } else {
                 setStatus('error');
@@ -66,7 +65,7 @@ const Contact = () => {
 
                         <div className="contact-details">
                             <div className="contact-detail-item">
-                                <FaEnvelope className="contact-icon" />
+                                <FaEnvelope className="contact-icon" aria-hidden="true" />
                                 <div>
                                     <h4>Email</h4>
                                     <a href={`mailto:${heroData.email}`}>{heroData.email}</a>
@@ -74,7 +73,7 @@ const Contact = () => {
                             </div>
 
                             <div className="contact-detail-item">
-                                <FaMapMarkerAlt className="contact-icon" />
+                                <FaMapMarkerAlt className="contact-icon" aria-hidden="true" />
                                 <div>
                                     <h4>Location</h4>
                                     <p>Bengaluru, Karnataka, India</p>
@@ -90,23 +89,30 @@ const Contact = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
                         viewport={{ once: true }}
+                        aria-label="Contact form"
+                        noValidate
                     >
-                        {status === 'success' && (
-                            <div className="form-status success">
-                                Message sent successfully!
-                            </div>
-                        )}
-                        {status === 'error' && (
-                            <div className="form-status error">
-                                Something went wrong. Please try again.
-                            </div>
-                        )}
+                        <div className="form-status-region" role="status" aria-live="polite" aria-atomic="true">
+                            {status === 'success' && (
+                                <div className="form-status success">
+                                    Message sent successfully!
+                                </div>
+                            )}
+                            {status === 'error' && (
+                                <div className="form-status error">
+                                    Something went wrong. Please try again.
+                                </div>
+                            )}
+                        </div>
 
                         <div className="form-group">
+                            <label htmlFor="contact-name" className="form-label">Your Name</label>
                             <input
+                                id="contact-name"
                                 type="text"
                                 name="name"
                                 placeholder="Your Name"
+                                autoComplete="name"
                                 value={formData.name}
                                 onChange={handleChange}
                                 required
@@ -114,10 +120,13 @@ const Contact = () => {
                         </div>
 
                         <div className="form-group">
+                            <label htmlFor="contact-email" className="form-label">Your Email</label>
                             <input
+                                id="contact-email"
                                 type="email"
                                 name="email"
                                 placeholder="Your Email"
+                                autoComplete="email"
                                 value={formData.email}
                                 onChange={handleChange}
                                 required
@@ -125,7 +134,9 @@ const Contact = () => {
                         </div>
 
                         <div className="form-group">
+                            <label htmlFor="contact-subject" className="form-label">Subject</label>
                             <input
+                                id="contact-subject"
                                 type="text"
                                 name="subject"
                                 placeholder="Subject"
@@ -136,7 +147,9 @@ const Contact = () => {
                         </div>
 
                         <div className="form-group">
+                            <label htmlFor="contact-message" className="form-label">Your Message</label>
                             <textarea
+                                id="contact-message"
                                 name="message"
                                 placeholder="Your Message"
                                 rows="6"
@@ -146,8 +159,13 @@ const Contact = () => {
                             ></textarea>
                         </div>
 
-                        <button type="submit" className="submit-btn" disabled={status === 'submitting'}>
-                            {status === 'submitting' ? 'Sending...' : 'Send Message'}
+                        <button
+                            type="submit"
+                            className="submit-btn"
+                            disabled={status === 'submitting'}
+                            aria-disabled={status === 'submitting'}
+                        >
+                            {status === 'submitting' ? 'Sending…' : 'Send Message'}
                         </button>
                     </motion.form>
                 </div>

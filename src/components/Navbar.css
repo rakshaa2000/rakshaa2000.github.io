@@ -17,21 +17,23 @@
 
 .nav-brand {
     margin-bottom: 3rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 10px;
 }
 
 .brand-icon {
     font-size: 2rem;
     color: var(--accent-color);
-    cursor: pointer;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     transition: transform 0.3s ease;
 }
 
-.brand-icon:hover {
-    transform: scale(1.1);
-}
+.nav-brand:hover .brand-icon { transform: scale(1.1); }
 
 .nav-links-vertical {
     display: flex;
@@ -150,6 +152,8 @@
     }
 
     .nav-link {
+        min-width: 44px;
+        min-height: 44px;
         padding: 0.5rem;
         white-space: nowrap;
         justify-content: center;
